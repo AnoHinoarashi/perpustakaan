@@ -31,7 +31,7 @@ $jumlah = mysqli_num_rows($hasil);
             <th>No HP</th>
             <th>Jenis Anggota</th>
             <th>Alamat</th>
-            <th>Detail</th>
+            <th>Aksi</th>
         </tr>
         <?php $no = 1; while ($baris = mysqli_fetch_assoc($hasil)) { ?>
         <tr><td><?php echo $no++; ?></td>
@@ -41,7 +41,7 @@ $jumlah = mysqli_num_rows($hasil);
         <td><?php echo htmlspecialchars($baris['no_hp']); ?></td>
         <td><?php echo htmlspecialchars($baris['jenis_anggota']); ?></td>
         <td><?php echo htmlspecialchars($baris['alamat']); ?></td>
-        <td><a href="detail.php?id=<?php echo (int) $baris["id"]; ?>">Detail</a>
+        <td><a href="edit.php?id=<?php echo (int) $baris["id"]; ?>">Edit</a>
         <form class="inline" action="hapus.php" method="post"
         onsubmit="return confirm('yakin ingin menghapus data ini?');">
         <input type="hidden" name="id" value="<?php echo (int) $baris["id"]; ?>">
