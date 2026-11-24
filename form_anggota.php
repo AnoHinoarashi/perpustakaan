@@ -87,6 +87,7 @@ function isi($nama, $old) {
         </span>
         <br><br>
         <button type="submit">Daftar</button>
-    </form>
+    </form><br>
+    <a href="data.php">data</a>
 </body>
 </html>

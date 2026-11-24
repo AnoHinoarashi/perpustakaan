@@ -31,7 +31,7 @@ $jumlah = mysqli_num_rows($hasil);
             <th>No HP</th>
             <th>Jenis Anggota</th>
             <th>Alamat</th>
-            <th>D`etail</th>
+            <th>Detail</th>
         </tr>
         <?php $no = 1; while ($baris = mysqli_fetch_assoc($hasil)) { ?>
         <tr><td><?php echo $no++; ?></td>
@@ -50,6 +50,7 @@ $jumlah = mysqli_num_rows($hasil);
         </td>
     </tr>
         <?php } ?>
-    </table>
+    </table><br>
+    <a href="form_anggota.php">kembali ke form</a>
 </body>
 </html>
